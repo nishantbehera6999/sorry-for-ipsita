@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ipsita ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffe6f2,#fff8fb);
+overflow-x:hidden;
+}
+
+.petal{
+position:fixed;
+top:-20px;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+.container{
+width:90%;
+max-width:700px;
+margin:40px auto;
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+text-align:center;
+}
+
+img{
+width:100%;
+border-radius:15px;
+margin:15px 0;
+}
+
+h1{
+color:#d63384;
+}
+
+.bar{
+height:18px;
+background:#eee;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.fill{
+height:100%;
+width:0%;
+background:#ff4f8b;
+transition:.05s;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+background:#d63384;
+color:white;
+border:none;
+border-radius:30px;
+font-size:17px;
+cursor:pointer;
+}
+
+#letter{
+display:none;
+margin-top:20px;
+text-align:left;
+line-height:1.8;
+}
+
+footer{
+margin-top:25px;
+color:#d63384;
+font-weight:bold;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+for(let i=0;i<20;i++){
+let p=document.createElement("div");
+p.className="petal";
+p.innerHTML="🌸";
+p.style.left=Math.random()*100+"vw";
+p.style.animationDuration=(5+Math.random()*5)+"s";
+document.body.appendChild(p);
+}
+</script>
+
+<div class="container">
+
+<h1>For My Princess Ipsita 🌸</h1>
+
+<p>From Dibya ❤️</p>
+
+<img src="IMG-20260701-WA0041.jpg">
+
+<h3>Forgiveness Meter</h3>
+
+<div class="bar">
+<div class="fill" id="fill"></div>
+</div>
+
+<p id="percent">0%</p>
+
+<button onclick="showLetter()">
+💌 Read My Heart
+</button>
+
+<div id="letter" style="display:none; margin-top:20px;">
+
+<h2>Dear Ipsita ❤️</h2>
+
+<p>
+Please forgive me.
+Mu tate sabu bele princess treatment debi.
+Pare emiti bhul mu life re kebe karibini.
+
+Kebe slangs use karibini.
+Kebe tate hurt karibini.
+
+Sabu bele tora katha manibi.
+
+Jou jinsa tora pain bhala nuha,
+seita au kebe karibini.
+i cant froget our mmemories we made together 
+i cant live with you this 4years mu bahut bhul karichi tate may 
+be bahut kharap way re treat karithibi but mu realize karuchi
+rahiparibini to bina please. i cant forget 22 november 2021 the girls i saw in
+school dress i want to see her in bridal dress please stay
+with me
+
+Mu tora sahita pura future dekhichi.
+this is the love express my side from your Aloo
+
+Tu mora life re bahut important.
+
+I know trust is earned through actions, not just words.
+I will work to become a better person.
+
+Thank you for reading my heart.
+</p>
+
+<footer>
+Forever Yours ❤️<br>
+Dibya
+</footer>
+<button onclick="showFinalPage()">
+❤️ Continue
+</button>
+</div>
+<div id="finalPage" style="display:none;text-align:center;margin-top:50px;padding:30px;">
+
+<h1 style="color:#ff4d88;">❤️ One Last Promise ❤️</h1>
+
+<p style="font-size:20px;">
+Ipsita, I know I can't change the past,
+but I promise to become a better person every day.
+</p>
+
+<h3>My Promise To You</h3>
+
+<div style="width:90%;margin:auto;background:#eee;border-radius:20px;height:20px;overflow:hidden;">
+    <div id="promiseBar"
+         style="width:0%;height:100%;background:#ff4d88;"></div>
+</div>
+
+<h2 id="promiseText">0%</h2>
+
+<p style="font-size:18px;line-height:1.8;">
+🌸 Princess treatment always.<br>
+🌸 No slangs.<br>
+🌸 Never intentionally hurt you.<br>
+🌸 Listen to your feelings.<br>
+🌸 Respect you and your decisions.<br>
+🌸 Become a better Dibya every single day.
+</p>
+
+<h2 style="color:#ff4d88;">
+Forever Yours ❤️<br>
+Dibya
+</div>
+</h2>
+
+<script>
+
+let p=0;
+
+let x=setInterval(function(){
+
+p++;
+
+fill.style.width=p+"%";
+
+percent.innerHTML=p+"%";
+
+if(p==100){
+
+clearInterval(x);
+
+}
+
+},40);
+
+function showLetter(){
+
+document.getElementById("letter").style.display="block";
+
+document.getElementById("letter").scrollIntoView({
+    behavior:"smooth"
+});
+
+}
+
+</script>
+<script>
+function showFinalPage(){
+
+document.getElementById("finalPage").style.display="block";
+
+let value=0;
+
+let timer=setInterval(function(){
+
+value++;
+
+document.getElementById("promiseBar").style.width=value+"%";
+
+document.getElementById("promiseText").innerHTML=value+"%";
+
+if(value>=100){
+clearInterval(timer);
+}
+
+},30);
+
+document.getElementById("finalPage").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+</script>
+</body>
+</html>
